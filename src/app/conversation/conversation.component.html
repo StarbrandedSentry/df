@@ -1,0 +1,20 @@
+<div class="body">
+
+  <div *ngFor="let message of messages" [ngClass]="{question: message.sender == 'me', answer: message.sender == 'bot'}">
+    {{message.message}}
+  </div>
+
+  <!-- <div class="answer">
+    fwafa
+  </div> -->
+
+</div>
+
+
+<div class="toolbar">
+  <input type="text" autocomplete="off" [(ngModel)]="input">
+
+  <i class="material-icons" (click)="onSend()">
+    send
+  </i>
+</div>
